@@ -1,6 +1,6 @@
 {
-  "name": "wpt-block-cli",
-  "version": "1.0.8",
+  "name": "block-cli",
+  "version": "1.0.0",
   "description": "自动化构建后台代码",
   "main": "",
   "scripts": {

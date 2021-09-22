@@ -1,0 +1,23 @@
+{
+  "name": "wpt-block-cli",
+  "version": "1.0.8",
+  "description": "自动化构建后台代码",
+  "main": "",
+  "scripts": {
+    "test": "node bin/index.js"
+  },
+  "bin": {
+    "wblock": "./bin/index.js",
+    "wb": "./bin/index.js"
+  },
+  "author": "lyq",
+  "license": "ISC",
+  "dependencies": {
+    "chalk": "^4.1.1",
+    "commander": "^8.0.0",
+    "download": "^8.0.0",
+    "inquirer": "^8.1.1",
+    "np": "^7.5.0",
+    "yargs": "^17.0.1"
+  }
+}

@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import { Tooltip, Icon, TimePicker, message } from 'antd';
 import PageHeaderLayout from '@/layouts/PageHeaderLayout';
-import { WForm } from 'wptpc-design';
+import { WForm } from 'xxxpc-design';
 import moment from 'moment';
 
 const Index = () => {
@@ -12,21 +12,21 @@ const Index = () => {
   // 表单配置
   const columns = [
     {
-      title: '模块标题',
+      title: '模块标题'
     },
     {
       name: 'userName',
       label: '用户名',
       placeholder: '请输入用户名',
       rules: [{ required: true, message: '请输入用户名' }],
-      onChange: (e) => console.log(e.target.value),
+      onChange: e => console.log(e.target.value)
     },
     {
       name: 'number',
       label: '数字输入',
       type: 'inputNumber',
       min: 0,
-      max: 100,
+      max: 100
     },
     {
       name: 'email',
@@ -34,13 +34,13 @@ const Index = () => {
       rules: [
         {
           required: true,
-          message: '请输入邮箱',
+          message: '请输入邮箱'
         },
         {
           type: 'email',
-          message: 'The input is not valid E-mail!',
-        },
-      ],
+          message: 'The input is not valid E-mail!'
+        }
+      ]
     },
 
     {
@@ -57,11 +57,11 @@ const Index = () => {
         { value: '5', label: '品牌馆' },
         { value: '6', label: '拍卖行' },
         { value: '7', label: '玩家社区' },
-        { value: '8', label: '合买' },
+        { value: '8', label: '合买' }
       ],
       onChange: () => {
         setFields({ category: void 0 });
-      },
+      }
     },
     {
       name: 'category',
@@ -77,8 +77,8 @@ const Index = () => {
         { value: '5', label: '品牌馆' },
         { value: '6', label: '拍卖行' },
         { value: '7', label: '玩家社区' },
-        { value: '8', label: '合买' },
-      ],
+        { value: '8', label: '合买' }
+      ]
     },
     {
       name: 'cascader',
@@ -95,11 +95,11 @@ const Index = () => {
               children: [
                 {
                   value: 'xihu',
-                  label: 'West Lake',
-                },
-              ],
-            },
-          ],
+                  label: 'West Lake'
+                }
+              ]
+            }
+          ]
         },
         {
           value: 'jiangsu',
@@ -111,17 +111,17 @@ const Index = () => {
               children: [
                 {
                   value: 'zhonghuamen',
-                  label: 'Zhong Hua Men',
-                },
-              ],
-            },
-          ],
-        },
-      ],
+                  label: 'Zhong Hua Men'
+                }
+              ]
+            }
+          ]
+        }
+      ]
       // formatter: value => `$ ${value}`.replace(/\B(?=(\d{3})+(?!\d))/g, ','),
     },
     {
-      title: '模块标题',
+      title: '模块标题'
     },
     {
       name: 'checkbox',
@@ -130,19 +130,19 @@ const Index = () => {
       options: [
         {
           label: 'Apple',
-          value: 'apple',
+          value: 'apple'
         },
         {
           label: 'Pear',
           value: 'pear',
-          disabled: true,
+          disabled: true
         },
         {
           label: 'Orange',
-          value: 'orange',
-        },
+          value: 'orange'
+        }
       ],
-      rules: [{ required: true, message: '请选择' }],
+      rules: [{ required: true, message: '请选择' }]
     },
     {
       name: 'radio',
@@ -152,23 +152,23 @@ const Index = () => {
         {
           label: 'Apple',
           value: 'apple',
-          disabled: true,
+          disabled: true
         },
         {
           label: 'Pear',
-          value: 'pear',
+          value: 'pear'
         },
         {
           label: 'Orange',
-          value: 'orange',
-        },
+          value: 'orange'
+        }
       ],
-      rules: [{ required: true, message: '请选择' }],
+      rules: [{ required: true, message: '请选择' }]
     },
     {
       name: 'isOpen',
       label: '开关',
-      type: 'switch',
+      type: 'switch'
     },
     {
       name: 'password',
@@ -181,12 +181,12 @@ const Index = () => {
         </span>
       ),
       type: 'password',
-      rules: [{ required: true, message: '请输入密码' }],
+      rules: [{ required: true, message: '请输入密码' }]
     },
     {
       name: 'rate',
       label: '星级',
-      type: 'rate',
+      type: 'rate'
     },
     {
       name: 'textarea',
@@ -195,7 +195,7 @@ const Index = () => {
       maxLength: 10,
       showCount: true,
       rows: 5, //默认为3
-      rules: [{ required: true, message: '请输入文本域' }],
+      rules: [{ required: true, message: '请输入文本域' }]
     },
 
     {
@@ -204,19 +204,19 @@ const Index = () => {
       type: 'datePicker',
       // format: 'YYYY-MM-DD',
       // showTime: true,
-      rules: [{ required: true, message: '请选择日期' }],
+      rules: [{ required: true, message: '请选择日期' }]
     },
     {
       name: 'dateRange',
       label: '日期范围',
       type: 'rangePicker',
-      rules: [{ required: true, message: '请选择日期' }],
+      rules: [{ required: true, message: '请选择日期' }]
     },
     {
       name: 'customCom',
       label: '自定义组件',
       type: 'customCom',
-      com: <TimePicker />,
+      com: <TimePicker />
     },
     {
       name: 'treeSelect',
@@ -231,34 +231,34 @@ const Index = () => {
             {
               title: 'Child Node1',
               value: '0-0-1',
-              key: '0-0-1',
+              key: '0-0-1'
             },
             {
               title: 'Child Node2',
               value: '0-0-2',
-              key: '0-0-2',
-            },
-          ],
+              key: '0-0-2'
+            }
+          ]
         },
         {
           title: 'Node2',
           value: '0-1',
-          key: '0-1',
-        },
-      ],
+          key: '0-1'
+        }
+      ]
     },
     {
       name: 'fileList',
       label: '上传',
       type: 'commonUpload',
       multiple: true,
-      rules: [{ required: true, message: '请上传文件' }],
+      rules: [{ required: true, message: '请上传文件' }]
     },
     {
       name: 'sortFileList',
       label: '上传拖拽',
       type: 'sortUpload',
-      multiple: true,
+      multiple: true
       // rules: [{ required: true, message: '请上传文件' }]
     },
     {
@@ -268,13 +268,13 @@ const Index = () => {
       options: [
         {
           value: 1,
-          label: '是否需要邮件接收下载通知',
-        },
-      ],
-    },
+          label: '是否需要邮件接收下载通知'
+        }
+      ]
+    }
   ];
 
-  const getFormData = (v) => {
+  const getFormData = v => {
     console.log('收取表单的值: ', v);
     setConfirmLoading(true);
     setTimeout(() => {
@@ -289,7 +289,7 @@ const Index = () => {
         onCancel={() => {
           console.log('取消取消');
         }}
-        onOk={(v) => {
+        onOk={v => {
           getFormData(v);
         }}
         confirmLoading={confirmLoading}
@@ -310,8 +310,8 @@ const Index = () => {
             isOpen: true,
             rate: 3,
             customCom: moment('10:10:12', 'HH:mm:ss'),
-            treeSelect: '0-0-2',
-          },
+            treeSelect: '0-0-2'
+          }
         }}
       />
     </PageHeaderLayout>
